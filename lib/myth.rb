@@ -26,7 +26,16 @@ module Myth
 
     def self.context
       # Window or self has to be added so myth can attach to something
-      @context ||= ExecJS.compile("self={};" + contents)
+      @context ||= ExecJS.compile("
+preprocess = function(css, options) {
+  try {
+    css = myth(css, options);
+  } catch (e) {
+    e.css = css;
+    throw e;
+  }
+  return css;
+};" + contents)
     end
   end
 
@@ -45,7 +54,7 @@ module Myth
     def preprocess(script, options = {})
       script = script.read if script.respond_to?(:read)
 
-      Source.context.call("self.myth", script, options)
+      Source.context.call("preprocess", script, options)
     end
   end
 end

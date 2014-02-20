@@ -1,3 +1,5 @@
+[![Travis CI](https://api.travis-ci.org/danschultzer/ruby-myth.png)](http://travis-ci.org/danschultzer/ruby-myth)
+
 Ruby Myth
 =================
 
