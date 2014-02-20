@@ -26,7 +26,7 @@ module Myth
 
     def self.context
       # Window or self has to be added so myth can attach to something
-      @context ||= ExecJS.compile("preprocess=function(css,options){try {css=myth(css,options);}catch (e){e.css = css;throw e;}return css;};if(typeof self==\"undefined\")self={};" + contents)
+      @context ||= ExecJS.compile("preprocess=function(css,options){try{css=myth(css,options);}catch(e){e.css=css;throw e;}return css;};if(typeof self==\"undefined\")self={};" + contents + "if(self.myth)myth=self.myth;")
     end
   end
 
