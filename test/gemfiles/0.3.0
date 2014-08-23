@@ -1,3 +1,3 @@
 source 'https://rubygems.org'
 gemspec :path => './../..'
-gem 'myth-source', '1.0.0'
+gem 'myth-source', '0.3.0'

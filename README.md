@@ -31,7 +31,7 @@ The [ExecJS](https://github.com/sstephenson/execjs) library is used to automatic
 
 ## Running tests
 
-    $ bundle install
-    $ bundle exec rake test
+	$ BUNDLE_GEMFILE=test/gemfiles/0.3.0 bundle install
+    $ BUNDLE_GEMFILE=test/gemfiles/0.3.0 rake test
 
 If you need to test against local gems, use Bundler's gem :path option in the Gemfile.

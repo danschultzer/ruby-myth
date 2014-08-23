@@ -1,7 +1,7 @@
 Gem::Specification.new do |s|
   s.name      = 'myth'
-  s.version   = '1.0.1'
-  s.date      = '2014-02-20'
+  s.version   = '1.0.2'
+  s.date      = '2014-08-23'
 
   s.homepage    = "http://github.com/danschultzer/ruby-myth"
   s.summary     = "Ruby Myth Preprocessor"
@@ -15,7 +15,7 @@ Gem::Specification.new do |s|
     'README.md'
   ]
 
-  s.add_dependency 'myth-source', '>= 1.0.0'
+  s.add_dependency 'myth-source', '>= 0.3.0'
   s.add_dependency 'execjs'
   s.add_development_dependency 'json'
   s.add_development_dependency 'rake'
